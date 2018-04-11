@@ -10,6 +10,17 @@ def bilinear_sampler_1d_h(input_images, x_offset, **kwargs):
 		return rep.view(-1)
 
 	def _interpolate(im, x, y):
+		
+		_edge_size = 0
+		if _wrap_mode == 'border':
+			_edge_size = 1
+			im = F.pad(im,(0,1,1,0), 'constant', 0)
+			x = x + _edge_size
+			y = y + _edge_size
+		elseif _wrap_mode == 'edge':
+			_edge_size = 0
+		else:
+			return None
 
 		x = torch.clamp(x, 0.0,  _width_f - 1)
 
