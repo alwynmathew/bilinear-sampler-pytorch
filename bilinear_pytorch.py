@@ -46,10 +46,9 @@ def bilinear_sampler_1d_h(input_images, x_offset, **kwargs):
 		idx_l = Variable(idx_l.type(torch.cuda.LongTensor))
 		idx_r = Variable(idx_r.type(torch.cuda.LongTensor))
 
-		im_flat = im.contiguous().view(-1) 
-
-		pix_l = torch.gather(im_flat, 0, idx_l).unsqueeze(1)
-		pix_r = torch.gather(im_flat, 0, idx_r).unsqueeze(1)
+		im_flat = im.contiguous().view(-1, _num_channels)
+		pix_l = torch.gather(im_flat, 0, idx_l.repeat(_num_channels).view(-1, _num_channels))
+		pix_r = torch.gather(im_flat, 0, idx_r.repeat(_num_channels).view(-1, _num_channels)) 
 
 		weight_l = Variable((x1_f - x).unsqueeze(1))
 		weight_r = Variable((x - x0_f).unsqueeze(1))
