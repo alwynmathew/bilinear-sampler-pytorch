@@ -6,3 +6,7 @@ Ported from [tensorflow implementation](https://github.com/mrharicot/monodepth/b
 1. <small id="f1"> [Unsupervised Monocular Depth Estimation with Left-Right Consistency](https://arxiv.org/pdf/1609.03677.pdf)   </small>
 
 2. <small id="f2"> [Spatial Transformer Networks](https://arxiv.org/pdf/1506.02025.pdf)  </small>
+
+### Known issues
+
+1. ```_wrap_mode == 'border'``` doesnt work.
