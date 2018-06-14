@@ -10,3 +10,7 @@ Ported from [tensorflow implementation](https://github.com/mrharicot/monodepth/b
 ### Known issues
 
 1. ```_wrap_mode == 'border'``` doesnt work.
+
+### Pytorch build-in bilinear sammpler
+
+
