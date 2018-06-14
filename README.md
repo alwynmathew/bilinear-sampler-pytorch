@@ -7,9 +7,9 @@ Ported from [tensorflow implementation](https://github.com/mrharicot/monodepth/b
 
 2. <small id="f2"> [Spatial Transformer Networks](https://arxiv.org/pdf/1506.02025.pdf)  </small>
 
-##### Known issues
+##### Known issue
 
-1. ```_wrap_mode == 'border'``` doesnt work.
+```_wrap_mode == 'border'``` doesnt work.
 
 ### Alternative Pytorch build-in bilinear sammpler
 
