@@ -1,7 +1,7 @@
 def image_warp(img, depth, padding_mode='zeros'):
     
     # img: the source image (where to sample pixels) -- [B, 3, H, W]
-    # depth: depth map of the target image -- [B, H, W]
+    # depth: depth map of the target image -- [B, 1, H, W]
     # Returns: Source image warped to the target image
    
 
