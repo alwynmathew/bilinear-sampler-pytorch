@@ -11,7 +11,7 @@ Ported from [tensorflow implementation](https://github.com/mrharicot/monodepth/b
 
 ```_wrap_mode == 'border'``` doesnt work.
 
-### Alternative Pytorch build-in bilinear sammpler
+### Alternate Pytorch build-in bilinear sammpler
 
 Usage can be found at [bilinear.py](https://github.com/alwynmathew/bilinear-sampler-pytorch/blob/master/bilinear.py). Thanks to [@scholltan](https://github.com/scholltan) for the code.
 
